@@ -98,7 +98,7 @@ The correlation coefficient between the total number people fully vaccinated eac
 	The Chi-Square was also originally chosen to be used for this second dataset as well. However, again, the data in this dataset was solely numerical data. Therefore, a Chi-Square tests, which works with categorical data, is not suited to analyze this data. Thus, the results of the Chi-Square for this dataset are also inaccurate and unhelpful.
 chisq.test(death.df$NewDeaths, death.df$DailyCountofPeopleFullyVaccinated, correct=FALSE)
  
-	Pearson's Chi-squared test
+Pearson's Chi-squared test
 
 data:  death.df$NewDeaths and death.df$DailyCountofPeopleFullyVaccinated
 X-squared = 208754, df = 208320, p-value = 0.2505
@@ -131,6 +131,7 @@ Residual standard error: 502000 on 479 degrees of freedom
 Multiple R-squared:  0.03347,	Adjusted R-squared:  0.03145 
 F-statistic: 16.59 on 1 and 479 DF,  p-value: 5.442e-05
 The p-value found using linear regression, 5.44e-05, is almost exactly the same as the p-value found using the Pearson Correlation Test. This validates the results found from the Pearson Correlation Test, using the p-value and F-statistics. It is found, again, that the results are statistically significant. Thus, a slight, negative, linear relationship between the total number people fully vaccinated each day and the number of deaths per day exists and is validated. The Multiple R-Squared value is 0.03347. This implies that 3.347% of the variation in the number deaths per day, can be explained by the number people fully vaccinated each day. However, the residual standard error for this linear regression is 502000, and it is something to keep in consideration.
+
 	This data was then graphed (see appendix) as well in order to visually interpret the results found by linear regression.
 plot(death.df$NewDeaths, death.df$DailyCountofPeopleFullyVaccinated,
      xlab="Numbers of People Fully Vaccinated per Day", 
